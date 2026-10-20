@@ -37,3 +37,9 @@
     transform: rotate(360deg);
   }
 }
+
+/* Slide-in animations start off-screen; never let them make the page scroll sideways on phones.
+   `clip` (not `hidden`) keeps sticky/fixed elements working. */
+.App {
+  overflow-x: clip;
+}
