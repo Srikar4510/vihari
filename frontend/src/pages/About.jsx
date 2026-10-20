@@ -7,12 +7,14 @@ import CountUp from "../components/UI/CountUp";
 import "../components/CSS/About.css";
 import tourPhotos from "../constants/tourPhotos.json";
 import { CONTACT } from "../constants/contact";
+import { useSiteStats } from "../utils/siteStats";
 
-const STATS = [
-  { value: 184, suffix: '+', label: 'Daily buses' },
-  { value: 46, label: 'Routes' },
-  { value: 16, label: 'Cities' },
-  { value: 9, label: 'Curated tours' },
+// Live counts from the API.
+const statItems = (s) => [
+  { value: s.buses, label: 'Daily buses' },
+  { value: s.routes, label: 'Routes' },
+  { value: s.cities, label: 'Cities' },
+  { value: s.tours, label: 'Curated tours' },
 ];
 
 const STEPS = [
@@ -31,6 +33,7 @@ const VALUES = [
 const STACK = ['React', 'Redux Toolkit', 'Node.js', 'Express', 'MongoDB', 'Redis', 'Razorpay', 'OpenStreetMap'];
 
 const About = () => {
+  const siteStats = useSiteStats();
   const location = useLocation();
   const [form, setForm] = useState({ name: '', email: '', subject: '', message: '' });
   const [sent, setSent] = useState(false);
@@ -99,9 +102,10 @@ const About = () => {
           </Reveal>
         </section>
 
+        {siteStats?.buses > 0 && (
         <section className="about-stats">
           <div className="container about-stats-grid">
-            {STATS.map((s, i) => (
+            {statItems(siteStats).map((s, i) => (
               <Reveal key={s.label} delay={i * 100} className="about-stat">
                 <strong><CountUp value={s.value} suffix={s.suffix || ''} /></strong>
                 <span>{s.label}</span>
@@ -109,6 +113,7 @@ const About = () => {
             ))}
           </div>
         </section>
+        )}
 
         <section className="container about-section">
           <Reveal className="about-heading">

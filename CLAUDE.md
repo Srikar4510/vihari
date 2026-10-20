@@ -90,7 +90,12 @@ feature ships, move its roadmap item to **Done** with the date.
   - Partner/admin: `components/CSS/Partner.css` (`pt-` prefix, tokens on `.pt-shell`, admin gets a
     purple sidebar via `.pt-shell--admin`).
   - Chat widget: `ChatAssistant.css`.
-- **PDFs:** jsPDF (pinned 4.2.1) in `utils/ticketPdf.js`. Built-in fonts have no ₹, so PDFs use "Rs.".
+- **PDFs:** jsPDF (pinned 4.2.1). Built-in fonts have no ₹, so PDFs use "Rs.". Two copies of the same
+  layout: `frontend/src/utils/ticketPdf.js` (traveller downloads) and `backend/utils/ticketPdf.js`
+  (email attachments; crops photos with a clip path, reads image sizes itself). Keep them in sync.
+- **Email:** `backend/utils/mailer.js` (`sendMail`) uses Brevo's HTTPS API when `BREVO_API_KEY` is set,
+  else Gmail SMTP. It never throws by default and skips reserved test domains. Booking confirmations
+  are queued from the booking controllers via `utils/bookingEmails.js`.
 - **Booking draft:** kept in sessionStorage (bus context). The passenger form autosaves.
 
 ## Conventions

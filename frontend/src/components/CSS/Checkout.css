@@ -694,3 +694,12 @@ a.btn-continue:hover {
         flex-direction: column;
     }
 }
+
+/* "Ticket emailed" note on the confirmation screen */
+.ticket-emailed {
+    margin: -6px 0 18px;
+    color: #178e9b;
+    font-size: 14px;
+}
+
+.ticket-emailed i { margin-right: 6px; }

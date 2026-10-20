@@ -61,7 +61,7 @@ const AdminAnnouncements = () => {
             {!info.mailConfigured && (
               <div className="pt-alert">
                 <i className="fa fa-envelope" />
-                <div><b>Email is not set up yet.</b> Add <code>MAIL_USER</code> and <code>MAIL_PASS</code> (a mail account and app password) to <code>backend/.env</code> and restart the server to send announcements.</div>
+                <div><b>Email is not set up yet.</b> Add <code>BREVO_API_KEY</code> and <code>MAIL_FROM</code> to the backend settings (or <code>MAIL_USER</code>/<code>MAIL_PASS</code> locally) and restart the server to send announcements.</div>
               </div>
             )}
             <section className="pt-card pt-form-section">

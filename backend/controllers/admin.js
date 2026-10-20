@@ -1,4 +1,3 @@
-const nodemailer = require('nodemailer');
 const bcrypt = require('bcryptjs');
 const User = require('../models/user');
 const Agent = require('../models/agent');
@@ -7,27 +6,13 @@ const Tour = require('../models/tour');
 const Ticket = require('../models/ticket');
 const TourTicket = require('../models/tourTickets');
 const { removeStored, sendStored } = require('../middleware/fileUpload');
+const { sendMail, mailConfigured } = require('../utils/mailer');
 
 // All handlers run after adminAuth, so req.admin is the logged-in admin.
 
-const mailConfigured = () => Boolean(process.env.MAIL_USER && process.env.MAIL_PASS);
-const transporter = () => nodemailer.createTransport({
-  service: 'gmail',
-  auth: { user: process.env.MAIL_USER, pass: process.env.MAIL_PASS },
-});
-
 // Sends an email if mail is configured. Never throws: the admin action itself already
 // succeeded, so a mail problem is reported back instead of failing the request.
-const notify = async (to, subject, text) => {
-  if (!mailConfigured()) return false;
-  try {
-    await transporter().sendMail({ from: process.env.MAIL_USER, to, subject, text });
-    return true;
-  } catch (error) {
-    console.log('Email failed:', error.message);
-    return false;
-  }
-};
+const notify = (to, subject, text) => sendMail({ to, subject, text });
 
 class InputError extends Error {
   constructor(message, status = 400) {
@@ -325,7 +310,7 @@ exports.announce = async (req, res) => {
     const audience = ['users', 'partners', 'all'].includes(req.body.audience) ? req.body.audience : 'users';
     if (subject.length < 3 || subject.length > 120) throw new InputError('Subject must be 3 to 120 characters');
     if (message.length < 10 || message.length > 5000) throw new InputError('Message must be 10 to 5000 characters');
-    if (!mailConfigured()) throw new InputError('Email is not set up on the server yet (MAIL_USER and MAIL_PASS in backend/.env)', 503);
+    if (!mailConfigured()) throw new InputError('Email is not set up on the server yet (BREVO_API_KEY, or MAIL_USER and MAIL_PASS)', 503);
     const [users, agents] = await Promise.all([
       audience === 'partners' ? [] : User.find({}, 'email').lean(),
       audience === 'users' ? [] : Agent.find({ flag: 1, blocked: { $ne: true } }, 'email').lean(),
@@ -333,7 +318,7 @@ exports.announce = async (req, res) => {
     const emails = [...new Set([...users, ...agents].map((x) => x.email).filter(Boolean))];
     if (!emails.length) throw new InputError('There is nobody to send this to', 404);
     // BCC so recipients don't see each other's addresses.
-    await transporter().sendMail({ from: process.env.MAIL_USER, to: process.env.MAIL_USER, bcc: emails, subject, text: message });
+    await sendMail({ bcc: emails, subject, text: message }, { throwOnError: true });
     res.json({ success: true, sent: emails.length });
   } catch (error) {
     if (!(error instanceof InputError)) {

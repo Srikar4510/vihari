@@ -5,7 +5,7 @@ bottom of the right section; move an item to **Done** with the date once it ship
 
 ## Planned features
 
-### 1. Email the PDF ticket to the booking email
+### 1. Email the PDF ticket to the booking email (done: sent automatically after booking)
 - Add a "Send to my email" button next to "Download PDF ticket" (trip details modal and the
   booking confirmation screen), and optionally send it automatically after a booking.
 - Generate the same ticket on the server (the browser version is `frontend/src/utils/ticketPdf.js`;
@@ -56,6 +56,10 @@ bottom of the right section; move an item to **Done** with the date once it ship
 - **Razorpay keys**: payments run in demo mode until test keys are added to the backend settings
   (see README > Payments). Live mode needs business KYC on Razorpay.
 
+- **Dependency upgrades**: `npm audit` reports vulnerabilities in old backend packages, and
+  `jsonwebtoken`'s dependency chain fails on Node 26+ (the backend is pinned to Node 22). Upgrade
+  dependencies (exact versions) and re-test login, uploads and payments.
+
 ## Done
 
 - 2026-10-19: Redesigned home, tours, about, login, partner, bus search, seat selection (seater,
@@ -80,3 +84,7 @@ bottom of the right section; move an item to **Done** with the date once it ship
   payment with a unique index, automatic refund when a paid booking fails). Seed split into
   `seed` (local demo), `seed:admin` (production admin) and `seed:catalog` (demo buses/tours for a real
   partner). Development notes in `CLAUDE.md`.
+- 2026-10-20: Booking confirmation emails with the PDF ticket / tour voucher attached (server-side PDFs,
+  sent in the background). Shared mailer: Brevo HTTPS API in production (Render's free plan blocks SMTP),
+  Gmail SMTP locally; reserved test addresses (example.com) are skipped. Live stats on home/About,
+  62-route demo catalog, Node 22 pin.

@@ -1,6 +1,8 @@
 const Bus = require('../models/buses');
 const Ticket = require('../models/ticket');
 const { paymentsEnabled, verifyPayment, refundIfPaid } = require('../utils/payments');
+const { emailBusTicket } = require('../utils/bookingEmails');
+const { mailConfigured } = require('../utils/mailer');
 const { QuoteError, busQuote, bookedSeats } = require('../utils/pricing');
 
 const GENDERS = ['Male', 'Female', 'Other'];
@@ -82,7 +84,9 @@ module.exports.booking = async (req, res) => {
          paymentId: paymentsEnabled() ? payment.paymentId : undefined,
          tickets: passengers.map(({ seat, name, age, gender }) => ({ seat, name: name.trim(), age: String(age), gender })),
       });
-      res.status(201).json({ success: true, ticket, demo: !live });
+      // Ticket PDF goes to the account email in the background.
+      emailBusTicket(ticket._id);
+      res.status(201).json({ success: true, ticket, demo: !live, emailQueued: mailConfigured() });
    } catch (error) {
       if (error?.code === 11000) {
          refundable = false;

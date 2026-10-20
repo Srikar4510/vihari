@@ -2,11 +2,13 @@ import React, { useState, useEffect } from "react";
 import '../CSS/TravelPage.css';
 import '../CSS/Animations.css';
 import SearchForm from "./SearchForm";
+import { useSiteStats } from "../../utils/siteStats";
 
-const STATS = [
-  { value: 184, suffix: '+', label: 'Daily buses' },
-  { value: 46, suffix: '', label: 'Routes' },
-  { value: 16, suffix: '', label: 'Cities' },
+// Bus, route and city counts are live (from the API); the rating is the site-wide review score.
+const statItems = (s) => [
+  { value: s.buses, suffix: '', label: 'Daily buses' },
+  { value: s.routes, suffix: '', label: 'Routes' },
+  { value: s.cities, suffix: '', label: 'Cities' },
   { value: 4.8, suffix: '★', label: 'Traveller rating', decimals: 1 },
 ];
 
@@ -30,6 +32,7 @@ const CountUp = ({ value, decimals = 0, duration = 1600, start }) => {
 
 const TravelPage = () => {
   const [statsStarted, setStatsStarted] = useState(false);
+  const siteStats = useSiteStats();
 
   useEffect(() => {
     const timer = setTimeout(() => setStatsStarted(true), 900);
@@ -61,7 +64,7 @@ const TravelPage = () => {
         </div>
 
         <div className="hero-stats hero-step" style={{ animationDelay: '0.75s' }}>
-          {STATS.map((s) => (
+          {siteStats?.buses > 0 && statItems(siteStats).map((s) => (
             <div className="hero-stat" key={s.label}>
               <strong><CountUp value={s.value} decimals={s.decimals} start={statsStarted} />{s.suffix}</strong>
               <span>{s.label}</span>

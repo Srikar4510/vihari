@@ -93,7 +93,7 @@ const Tours = () => {
       });
       const result = await bookTour({ tourId: tour._id, travellers: booking.seats, payment });
       setSelectedTour(null);
-      setBooked({ tour, travellers: booking.seats, amount: order.amount, demo: result.demo, ticket: result.ticket, contact: { ...booking } });
+      setBooked({ tour, travellers: booking.seats, amount: order.amount, demo: result.demo, emailQueued: result.emailQueued, ticket: result.ticket, contact: { ...booking } });
     } catch (err) {
       setPayError(err.message);
     } finally {
@@ -265,6 +265,7 @@ const Tours = () => {
             <h3>Tour booked!</h3>
             <p>{booked.tour.tname} for {booked.travellers} traveller{booked.travellers > 1 ? 's' : ''} · ₹{booked.amount.toLocaleString('en-IN')}</p>
             {booked.demo && <p className="booking-demo-note">Demo mode: no payment was taken.</p>}
+            {booked.emailQueued && <p className="booking-demo-note"><i className="fa fa-envelope" /> Your voucher PDF is on its way to your account email.</p>}
             {booked.ticket && (
               <button type="button" className="pkg-btn booking-download" onClick={downloadVoucher} disabled={downloading}>
                 <i className="fa fa-file-download" /> {downloading ? 'Preparing PDF…' : 'Download tour voucher (PDF)'}

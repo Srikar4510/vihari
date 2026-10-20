@@ -26,6 +26,7 @@ const ALIASES = {
   bengaluru: 'bangalore', blr: 'bangalore', bombay: 'mumbai', madras: 'chennai', vizag: 'visakhapatnam',
   vskp: 'visakhapatnam', hyd: 'hyderabad', hyderbad: 'hyderabad', pondy: 'pondicherry', puducherry: 'pondicherry',
   mysuru: 'mysore', bezawada: 'vijayawada', 'new delhi': 'delhi', amdavad: 'ahmedabad', tirumala: 'tirupati',
+  cochin: 'kochi', ernakulam: 'kochi', mangaluru: 'mangalore', kovai: 'coimbatore',
 };
 
 const STATES = {
@@ -33,10 +34,12 @@ const STATES = {
   pondicherry: 'tamil nadu', mumbai: 'maharashtra', pune: 'maharashtra', goa: 'goa', delhi: 'delhi',
   agra: 'uttar pradesh', jaipur: 'rajasthan', ahmedabad: 'gujarat', vijayawada: 'andhra pradesh',
   visakhapatnam: 'andhra pradesh', tirupati: 'andhra pradesh', eluru: 'andhra pradesh',
+  madurai: 'tamil nadu', coimbatore: 'tamil nadu', kochi: 'kerala', mangalore: 'karnataka',
+  chandigarh: 'chandigarh', dehradun: 'uttarakhand', warangal: 'telangana',
 };
 const REGIONS = {
   south: ['telangana', 'karnataka', 'tamil nadu', 'andhra pradesh', 'kerala'],
-  north: ['delhi', 'uttar pradesh', 'rajasthan', 'punjab', 'haryana'],
+  north: ['delhi', 'uttar pradesh', 'rajasthan', 'punjab', 'haryana', 'chandigarh', 'uttarakhand'],
   west: ['maharashtra', 'goa', 'gujarat'],
 };
 const STATE_WORDS = { tamilnadu: 'tamil nadu', tn: 'tamil nadu', up: 'uttar pradesh', ap: 'andhra pradesh', ts: 'telangana', ka: 'karnataka' };

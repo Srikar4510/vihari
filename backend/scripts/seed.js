@@ -8,10 +8,11 @@
 //   npm run seed:admin           PRODUCTION. Creates (or resets the password of) one admin from
 //                                ADMIN_EMAIL, ADMIN_PASSWORD and optional ADMIN_NAME. Touches nothing else.
 //
-//   npm run seed:catalog -- --owner=partner@email
+//   npm run seed:catalog -- --owner=partner@email [--create-owner]
 //                                Adds the demo buses, tours and places to an existing, approved
-//                                partner (e.g. one you signed up on the live site). Refuses if the
-//                                database already has buses.
+//                                partner (e.g. one you signed up on the live site). With
+//                                --create-owner it first creates that partner (OWNER_NAME,
+//                                OWNER_PASSWORD). Refuses if the database already has buses.
 try { process.loadEnvFile(require('path').join(__dirname, '..', '.env')); } catch { /* no .env file */ }
 const mongoose = require('mongoose');
 const bcrypt = require('bcryptjs');
@@ -54,6 +55,14 @@ const ROUTES = [
   ['Ahmedabad', 'Pune', 11, 1250],
   ['Ahmedabad', 'Jaipur', 11, 1150],
   ['Delhi', 'Ahmedabad', 15, 1550],
+  ['Chennai', 'Madurai', 8, 800],
+  ['Chennai', 'Coimbatore', 8, 850],
+  ['Bangalore', 'Kochi', 10, 1100],
+  ['Bangalore', 'Mangalore', 7, 750],
+  ['Delhi', 'Chandigarh', 5, 600],
+  ['Delhi', 'Dehradun', 6, 650],
+  ['Hyderabad', 'Warangal', 3, 300],
+  ['Vijayawada', 'Tirupati', 7, 700],
 ];
 
 const OPERATORS = [
@@ -261,8 +270,18 @@ const seedCatalogFor = async () => {
   const arg = process.argv.find((a) => a.startsWith('--owner='));
   const email = arg ? arg.slice(8).trim().toLowerCase() : '';
   if (!email) throw new Error('Pass the partner email: npm run seed:catalog -- --owner=partner@email');
-  const agent = await Agent.findOne({ email });
-  if (!agent) throw new Error(`No partner with email ${email}. Sign up as a partner on the site first.`);
+  let agent = await Agent.findOne({ email });
+  // --create-owner: create the partner (approved) when it doesn't exist yet. Uses OWNER_NAME and
+  // OWNER_PASSWORD (10+ characters) so no weak demo password ends up in production.
+  if (!agent && process.argv.includes('--create-owner')) {
+    const plain = String(process.env.OWNER_PASSWORD || '');
+    if (plain.length < 10 || /^password/i.test(plain)) throw new Error('Set OWNER_PASSWORD to a strong password (at least 10 characters).');
+    agent = await Agent.create({
+      agentName: String(process.env.OWNER_NAME || 'Practice Travels').trim(), email, password: await bcrypt.hash(plain, 10), document: 'seed', flag: 1,
+    });
+    console.log(`Partner ${email} created (approved).`);
+  }
+  if (!agent) throw new Error(`No partner with email ${email}. Sign up as a partner on the site first, or add --create-owner.`);
   if (agent.flag !== 1 || agent.blocked) throw new Error(`${email} is not an approved, active partner. Approve it in the admin console first.`);
   if ((await Bus.estimatedDocumentCount()) > 0) throw new Error('The database already has buses; the demo catalog is only added to an empty database.');
   await seedCatalog(agent);

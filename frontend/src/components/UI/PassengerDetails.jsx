@@ -76,6 +76,7 @@ const PassengerDetails = () => {
             <div className="ticket-check"><i className="fa fa-check" /></div>
             <h1>Booking confirmed!</h1>
             <p>{booking.demo ? 'Demo mode: no payment was taken.' : 'Payment received.'} Have a great trip.</p>
+            {booking.emailQueued && <p className="ticket-emailed"><i className="fa fa-envelope" /> Your e-ticket PDF is on its way to your account email.</p>}
             <div className="ticket">
               <div className="ticket-top">
                 <div>

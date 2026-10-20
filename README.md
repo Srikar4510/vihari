@@ -70,7 +70,8 @@ buses, tours, bookings and demo accounts and starts again. **Never run it agains
 | `FRONTEND_URL` | In production | Website address(es) allowed to call the API, comma-separated |
 | `CLOUDINARY_URL` | In production | Where partner photos and documents are stored. Without it, files go to `backend/uploads`, which most hosts wipe on every deploy |
 | `REDIS_URL` | No | Caches the tours list |
-| `MAIL_USER`, `MAIL_PASS` | No | Gmail address and app password for partner emails and announcements |
+| `BREVO_API_KEY`, `MAIL_FROM` | No | Email via Brevo (works on Render's free plan): booking confirmations with the PDF ticket, partner emails, announcements. `MAIL_FROM` must be a verified Brevo sender |
+| `MAIL_USER`, `MAIL_PASS` | No | Local alternative: Gmail address and app password (used when `BREVO_API_KEY` is empty). Render's free plan blocks this |
 | `RAZORPAY_KEY_ID`, `RAZORPAY_KEY_SECRET` | No | Razorpay keys (see *Payments*). Without them, bookings use demo payments |
 | `PUBLIC_API_URL` | No | API address shown in the API docs |
 | `SEED_PASSWORD` | No | Password for the local demo accounts |
@@ -98,6 +99,8 @@ Free tier limits change; check them when you sign up.
    - Root directory: `backend`
    - Build command: `npm ci`
    - Start command: `npm start`
+   - Node version: the repo pins Node 22 (`backend/.node-version`). Newer Node versions break an
+     old token library, so keep 22 (or set `NODE_VERSION=22` in Render's environment).
    - Environment: `MONGO_URI`, `JWT_SECRET`, `CLOUDINARY_URL`, plus the optional ones.
      Set `FRONTEND_URL` after step 5.
    - Health check path: `/`
@@ -125,6 +128,10 @@ Notes:
   takes 30–60 seconds.
 - Bus and tour photos in the demo data load from Wikimedia Commons (credits at `/credits`).
 - Bus and tour photos for new items are uploaded to Cloudinary.
+- Email on Render goes through Brevo (Render's free plan blocks SMTP). `MAIL_FROM` must be a verified
+  Brevo sender. Addresses on domains with a strict DMARC policy (many college or company domains) can't
+  be verified without access to that domain's DNS; use a Gmail address, or your own domain authenticated
+  in Brevo for the best inbox placement.
 
 ## Payments (Razorpay)
 

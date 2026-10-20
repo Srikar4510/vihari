@@ -83,7 +83,7 @@ const AdminDashboard = () => {
           {admin && !admin.mailConfigured && (
             <div className="pt-alert">
               <i className="fa fa-envelope" />
-              <div><b>Email is not set up.</b> Partner approvals still work, but nobody gets notified and announcements can't be sent. Add <code>MAIL_USER</code> and <code>MAIL_PASS</code> to <code>backend/.env</code>.</div>
+              <div><b>Email is not set up.</b> Partner approvals still work, but nobody gets notified and announcements can't be sent. Add <code>BREVO_API_KEY</code> and <code>MAIL_FROM</code> to the backend settings (or <code>MAIL_USER</code>/<code>MAIL_PASS</code> locally).</div>
             </div>
           )}
 

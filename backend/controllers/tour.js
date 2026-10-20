@@ -1,6 +1,8 @@
 const Tour = require('../models/tour');
 const tourTicket = require('../models/tourTickets');
 const { paymentsEnabled, verifyPayment, refundIfPaid } = require('../utils/payments');
+const { emailTourVoucher } = require('../utils/bookingEmails');
+const { mailConfigured } = require('../utils/mailer');
 const { QuoteError, tourQuote } = require('../utils/pricing');
 
 
@@ -60,11 +62,14 @@ exports.booking = async (req, res) => {
             return res.status(402).json({ success: false, error: 'Payment could not be verified' });
         }
         const ticket = await tourTicket.create({ user: req.user.id, tour: tour._id, tickets: travellers, price: amount, paymentId: live ? payment.paymentId : undefined });
+        // Voucher PDF goes to the account email in the background.
+        emailTourVoucher(ticket._id);
         // Same shape as /api/auth/mytours (price is Decimal128 in the model, so convert it).
         res.status(201).json({
             success: true,
             ticket: { _id: ticket._id, tour: tour._id, travellers: ticket.tickets, price: Number(ticket.price), bookedAt: ticket._id.getTimestamp() },
             demo: !live,
+            emailQueued: mailConfigured(),
         });
     } catch (error) {
         if (error?.code === 11000) {
