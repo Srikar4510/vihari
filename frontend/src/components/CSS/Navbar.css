@@ -1,0 +1,205 @@
+* {
+  font-family: "Nunito", sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  /* text-transform: capitalize; */
+  outline: none;
+  border: none;
+  text-decoration: none;
+  transition: all 0.2s linear;
+  /* font-size:62.5%; */
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-padding-top: 6rem;
+  scroll-behavior: smooth;
+}
+
+/* Everything above is global and other pages depend on it (including the 10px root font size).
+   The navbar itself uses px sizes. It sits at the top of the page (it does not follow you when
+   scrolling); hero sections pull up underneath it with a negative top margin of --nav-overlap. */
+:root {
+  --nav-overlap: 96px;
+}
+
+.site-nav-wrap {
+  position: relative;
+  z-index: 900;
+  padding: 14px 20px;
+  pointer-events: none;
+}
+
+.site-nav {
+  max-width: 1240px;
+  margin: 0 auto;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: saturate(180%) blur(18px);
+  -webkit-backdrop-filter: saturate(180%) blur(18px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow: 0 8px 30px rgba(15, 30, 45, 0.12);
+  font-size: 16px;
+  pointer-events: auto;
+}
+
+.site-nav a,
+.site-nav a:hover {
+  text-decoration: none;
+}
+
+.site-nav-inner {
+  position: relative;
+  height: 66px;
+  padding: 0 10px 0 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.site-nav-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: #1f2d36;
+  font-family: 'Poppins', sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.site-nav-logo:hover {
+  color: #1f2d36;
+}
+
+.site-nav-logo-icon {
+  width: 38px;
+  height: 38px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 11px;
+  color: #fff;
+  font-size: 17px;
+  background: linear-gradient(135deg, #29d9d5, #1fb5c4);
+  box-shadow: 0 6px 14px rgba(41, 217, 213, 0.4);
+  transition: transform 0.3s;
+}
+
+.site-nav-logo:hover .site-nav-logo-icon {
+  transform: rotate(-8deg) scale(1.08);
+}
+
+.site-nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.site-nav-link {
+  padding: 9px 18px;
+  border-radius: 12px;
+  color: #4b5b64;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.site-nav-link:hover {
+  color: #1f2d36;
+  background: rgba(41, 217, 213, 0.1);
+}
+
+.site-nav-link.active {
+  color: #fff;
+  background: #1f2d36;
+}
+
+.site-nav-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: 10px;
+  padding: 11px 22px;
+  border-radius: 14px;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  background: linear-gradient(135deg, #29d9d5, #1fb5c4);
+  box-shadow: 0 6px 16px rgba(41, 217, 213, 0.35);
+  cursor: pointer;
+}
+
+.site-nav-cta:hover {
+  color: #fff;
+  transform: translateY(-1px);
+  box-shadow: 0 10px 22px rgba(41, 217, 213, 0.45);
+}
+
+.site-nav-cta--ghost {
+  color: #1f2d36;
+  background: transparent;
+  border: 1px solid #d9e2e7;
+  box-shadow: none;
+}
+
+.site-nav-cta--ghost:hover {
+  color: #e5484d;
+  border-color: #f3c2c4;
+  background: #fff5f5;
+  box-shadow: none;
+}
+
+.site-nav-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  padding: 10px;
+  background: transparent;
+  cursor: pointer;
+}
+
+.site-nav-toggle span {
+  width: 22px;
+  height: 2px;
+  border-radius: 2px;
+  background: #1f2d36;
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+.site-nav-toggle.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.site-nav-toggle.open span:nth-child(2) { opacity: 0; }
+.site-nav-toggle.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+@media (max-width: 860px) {
+  .site-nav-toggle {
+    display: flex;
+  }
+
+  .site-nav-menu {
+    position: absolute;
+    top: 74px;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 4px;
+    padding: 0 12px;
+    max-height: 0;
+    overflow: hidden;
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.97);
+    box-shadow: 0 16px 36px rgba(15, 30, 45, 0.18);
+    transition: max-height 0.35s ease, padding 0.35s ease;
+  }
+
+  .site-nav-menu.open {
+    max-height: 420px;
+    padding: 12px;
+  }
+
+  .site-nav-cta {
+    justify-content: center;
+    margin: 8px 0 0;
+  }
+}

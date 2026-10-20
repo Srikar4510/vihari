@@ -1,0 +1,22 @@
+# Dependencies (reinstalled with npm install / npm ci)
+node_modules/
+
+# Secrets: never commit these. Use the .env.example files as templates.
+.env
+.env.*
+!.env.example
+
+# Generated or local-only
+frontend/build/
+backend/logs/
+backend/uploads/
+coverage/
+*.log
+.DS_Store
+
+# Local tooling and machine-specific notes
+CLAUDE.local.md
+.code-review-graph/
+pre-commit-scripts/
+post-commit-scripts/
+.pre-commit-config.yaml

@@ -1,0 +1,53 @@
+.city-autocomplete {
+  position: relative;
+  width: 100%;
+}
+
+.city-suggestions {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  min-width: 260px;
+  margin: 0;
+  padding: 6px;
+  list-style: none;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 16px 40px rgba(15, 30, 45, 0.22);
+  z-index: 50;
+  border: 1px solid #e3eaee;
+  max-height: 320px;
+  overflow-y: auto;
+  text-align: left;
+}
+
+.city-suggestions li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  color: #2d3b45;
+  font-size: 15px;
+}
+
+.city-suggestions li i {
+  color: #29d9d5;
+  width: 14px;
+}
+
+.city-suggestions li.active,
+.city-suggestions li:hover {
+  background: #eafbfb;
+}
+
+.city-suggestions .city-name {
+  font-weight: 500;
+}
+
+.city-suggestions .city-meta {
+  margin-left: auto;
+  font-size: 12px;
+  color: #8a99a3;
+}

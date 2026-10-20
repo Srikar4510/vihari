@@ -1,0 +1,297 @@
+.single-package-item {
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, .1);
+    -webkit-transition: .5s;
+    -moz-transition: .5s;
+    -ms-transition: .5s;
+    -o-transition: .5s;
+    transition: .5s;
+}
+
+.single-package-item p{
+    font-size: 15px;
+    text-align: left;
+}
+.single-package-item-txt {
+    padding: 0 25px;
+}
+
+.single-package-item img {
+    width: 100%;
+}
+
+.single-package-item h3 {
+    position: relative;
+    font-size: 25px;
+    color: #565a5c;
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+    padding: 20px 0;
+}
+
+.single-package-item h3:after {
+    position: absolute;
+    content: " ";
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: #ebebeb;
+}
+
+.packages-para{
+    font-size: 15px;
+    text-align: left;
+}
+.about-btn {
+    margin-top: 20px;
+    letter-spacing: 1.2px;
+    -webkit-transition: 0.5s ease-in-out;
+    -moz-transition: 0.5s ease-in-out;
+    -ms-transition: 0.5s ease-in-out;
+    -o-transition: 0.5s ease-in-out;
+    transition: 0.5s ease-in-out;
+    text-decoration: none;
+}
+
+.about-view {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #00d8ff;
+    border: 1px solid #00d8ff;
+    width: 150px;
+    height: 60px;
+    white-space: nowrap;
+    color: #fff;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+    border-radius: 5px;
+    box-shadow: 0 5px 20px rgba(14, 15, 18, .2);
+    -webkit-transition: 0.5s ease-in-out;
+    -moz-transition: 0.5s ease-in-out;
+    -ms-transition: 0.5s ease-in-out;
+    -o-transition: 0.5s ease-in-out;
+    transition: 0.5s ease-in-out;
+}
+
+.about-btn:hover .about-view {
+    color: #fff;
+    background: #00d8d5;
+    text-decoration: none;
+    box-shadow: 0 5px 20px rgba(14, 15, 18, .7);
+    border: 1px solid #00d8d5;
+}
+/* Home page "Special Tours" cards. Sizes in px: Navbar.css sets the root font size to 10px. */
+.pkg-card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border-radius: 20px;
+    background: #fff;
+    font-size: 16px;
+    box-shadow: 0 12px 34px rgba(20, 40, 55, 0.1);
+    transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.4s;
+}
+
+.pkg-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 24px 50px rgba(20, 40, 55, 0.2);
+}
+
+.pkg-media {
+    position: relative;
+    height: 270px;
+    overflow: hidden;
+}
+
+.pkg-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.pkg-card:hover .pkg-media img {
+    transform: scale(1.1);
+}
+
+.pkg-media::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0) 35%, rgba(5, 20, 30, 0.8) 100%);
+}
+
+.pkg-media::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -75%;
+    z-index: 2;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.35), transparent);
+    transform: skewX(-25deg);
+}
+
+.pkg-card:hover .pkg-media::after {
+    animation: shine 0.9s ease;
+}
+
+.pkg-tag,
+.pkg-rating {
+    position: absolute;
+    top: 16px;
+    z-index: 3;
+    padding: 6px 14px;
+    border-radius: 30px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.pkg-tag {
+    left: 16px;
+    color: #fff;
+    background: linear-gradient(135deg, #ff7a59, #ff5370);
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    box-shadow: 0 6px 14px rgba(255, 83, 112, 0.4);
+}
+
+.pkg-rating {
+    right: 16px;
+    color: #2f3e46;
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(6px);
+}
+
+.pkg-rating i {
+    color: #f5a623;
+}
+
+.pkg-rating small {
+    color: #8a99a3;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.pkg-media-text {
+    position: absolute;
+    left: 22px;
+    right: 22px;
+    bottom: 18px;
+    z-index: 3;
+    text-align: left;
+}
+
+.pkg-media-text h3 {
+    margin: 0 0 4px;
+    color: #fff;
+    font-size: 30px;
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.pkg-media-text p {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 15px;
+}
+
+.pkg-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 22px 24px 24px;
+    text-align: left;
+}
+
+.pkg-duration {
+    margin: 0 0 14px;
+    color: #3995a3;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.pkg-duration i {
+    margin-right: 6px;
+}
+
+.pkg-features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 0 0 22px;
+    padding: 0;
+    list-style: none;
+}
+
+.pkg-features li {
+    padding: 6px 14px;
+    border-radius: 30px;
+    color: #3995a3;
+    background: #eafbfb;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.pkg-footer {
+    margin-top: auto;
+    padding-top: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px dashed #dfe6ea;
+}
+
+.pkg-price span,
+.pkg-price small {
+    display: block;
+    color: #8a99a3;
+    font-size: 12px;
+    line-height: 1.3;
+}
+
+.pkg-price strong {
+    display: block;
+    color: #2f3e46;
+    font-size: 28px;
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.2;
+}
+
+.pkg-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 13px 24px;
+    border-radius: 12px;
+    color: #fff;
+    background: linear-gradient(135deg, #29d9d5, #1fb5c4);
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    box-shadow: 0 8px 20px rgba(41, 217, 213, 0.4);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.pkg-btn i {
+    transition: transform 0.3s;
+}
+
+.pkg-btn:hover {
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 12px 26px rgba(41, 217, 213, 0.5);
+}
+
+.pkg-btn:hover i {
+    transform: translateX(4px);
+}

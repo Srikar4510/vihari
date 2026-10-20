@@ -1,0 +1,242 @@
+{
+  "iskcon": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/ISKCON_Bangalore_Temple.jpg/1280px-ISKCON_Bangalore_Temple.jpg",
+    "author": "Svpdasa",
+    "license": "CC BY 3.0",
+    "page": "https://commons.wikimedia.org/wiki/File:ISKCON_Bangalore_Temple.jpg"
+  },
+  "bannerghatta": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Saffari_at_Bannerghatta_National_Park_Bangalore_8418.JPG/1280px-Saffari_at_Bannerghatta_National_Park_Bangalore_8418.JPG",
+    "author": "Rameshng",
+    "license": "CC BY-SA 3.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Saffari_at_Bannerghatta_National_Park_Bangalore_8418.JPG"
+  },
+  "lalbagh": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Lalbagh_glass_house_during_flower_show_Jan_2012_1443.jpg/1280px-Lalbagh_glass_house_during_flower_show_Jan_2012_1443.jpg",
+    "author": "Rameshng",
+    "license": "CC BY-SA 3.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Lalbagh_glass_house_during_flower_show_Jan_2012_1443.jpg"
+  },
+  "gateway": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Mumbai%2C_Taj_Hotel%2C_Gateway_of_India_%286362182215%29.jpg/1280px-Mumbai%2C_Taj_Hotel%2C_Gateway_of_India_%286362182215%29.jpg",
+    "author": "Arian Zwegers",
+    "license": "CC BY 2.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Mumbai,_Taj_Hotel,_Gateway_of_India_(6362182215).jpg"
+  },
+  "chowmahalla": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Chowmahalla_Palace_01.jpg/1280px-Chowmahalla_Palace_01.jpg",
+    "author": "Bernard Gagnon",
+    "license": "CC BY-SA 3.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Chowmahalla_Palace_01.jpg"
+  },
+  "marinedrive": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Mumbai_03-2016_46_evening_at_Marine_Drive.jpg/1280px-Mumbai_03-2016_46_evening_at_Marine_Drive.jpg",
+    "author": "A.Savin",
+    "license": "FAL",
+    "page": "https://commons.wikimedia.org/wiki/File:Mumbai_03-2016_46_evening_at_Marine_Drive.jpg"
+  },
+  "lotus": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Lotus_Temple_in_New_Delhi_03-2016.jpg/1280px-Lotus_Temple_in_New_Delhi_03-2016.jpg",
+    "author": "A.Savin",
+    "license": "FAL",
+    "page": "https://commons.wikimedia.org/wiki/File:Lotus_Temple_in_New_Delhi_03-2016.jpg"
+  },
+  "redfort": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Lahori_Gate%2C_Red_Fort%2C_Delhi%2C_India_-_September_2014.jpg/1280px-Lahori_Gate%2C_Red_Fort%2C_Delhi%2C_India_-_September_2014.jpg",
+    "author": "Rickard T\u00f6rnblad",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Lahori_Gate,_Red_Fort,_Delhi,_India_-_September_2014.jpg"
+  },
+  "vidhana": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Vidhana_Soudha_LE.jpg/1280px-Vidhana_Soudha_LE.jpg",
+    "author": "DeepanjanGhosh",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Vidhana_Soudha_LE.jpg"
+  },
+  "indiagate": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/India_Gate_-_Delhi_%2837282946605%29.jpg/1280px-India_Gate_-_Delhi_%2837282946605%29.jpg",
+    "author": "Mike_fleming from London, England",
+    "license": "CC BY-SA 2.0",
+    "page": "https://commons.wikimedia.org/wiki/File:India_Gate_-_Delhi_(37282946605).jpg"
+  },
+  "qutub": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/View_of_Qutub_Minar_%281%29.jpg/1280px-View_of_Qutub_Minar_%281%29.jpg",
+    "author": "Syed Sajidul Islam",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:View_of_Qutub_Minar_(1).jpg"
+  },
+  "charminar": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/The_Charminar_on_a_cloudy_day.jpg/1280px-The_Charminar_on_a_cloudy_day.jpg",
+    "author": "Santosh Kumar Velamala",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:The_Charminar_on_a_cloudy_day.jpg"
+  },
+  "golconda": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Golconda_Fort_and_Hyderabad_city.jpg/1280px-Golconda_Fort_and_Hyderabad_city.jpg",
+    "author": "iMahesh",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Golconda_Fort_and_Hyderabad_city.jpg"
+  },
+  "juhu": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Juhu_beach_2019.jpg/1280px-Juhu_beach_2019.jpg",
+    "author": "Shishirdasika",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Juhu_beach_2019.jpg"
+  },
+  "blrpalace": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/BANGALORE_PALACE.jpg/1280px-BANGALORE_PALACE.jpg",
+    "author": "Basavaraj M",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:BANGALORE_PALACE.jpg"
+  },
+  "humayun": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Humayun%27s_Tomb_2_by_Hari_Madappad.jpg/1280px-Humayun%27s_Tomb_2_by_Hari_Madappad.jpg",
+    "author": "Hari Madappad",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Humayun%27s_Tomb_2_by_Hari_Madappad.jpg"
+  },
+  "elephanta": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Elephanta_-_Mahesh_Murti.jpg/1280px-Elephanta_-_Mahesh_Murti.jpg",
+    "author": "Ingo Mehling",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Elephanta_-_Mahesh_Murti.jpg"
+  },
+  "chennaicentral": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Chennai_train_station.jpg/1280px-Chennai_train_station.jpg",
+    "author": "Arian Zwegers derivative work: MrPanyGoff",
+    "license": "CC BY 2.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Chennai_train_station.jpg"
+  },
+  "taj": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Taj_Mahal_Tomb_at_sunrise.JPG/1280px-Taj_Mahal_Tomb_at_sunrise.JPG",
+    "author": "MarcBW",
+    "license": "CC BY-SA 3.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Taj_Mahal_Tomb_at_sunrise.JPG"
+  },
+  "adalaj": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Adalaj_Vav_02.jpg/1280px-Adalaj_Vav_02.jpg",
+    "author": "Tejal Acharya",
+    "license": "CC BY-SA 3.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Adalaj_Vav_02.jpg"
+  },
+  "sidisaiyyed": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Sidi_Saiyyed_Mosque%2C_Ahmedabad.jpg/1280px-Sidi_Saiyyed_Mosque%2C_Ahmedabad.jpg",
+    "author": "Bernard Gagnon",
+    "license": "CC BY-SA 3.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Sidi_Saiyyed_Mosque,_Ahmedabad.jpg"
+  },
+  "amer": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Jaipur_03-2016_02_Amber_Fort.jpg/1280px-Jaipur_03-2016_02_Amber_Fort.jpg",
+    "author": "A.Savin",
+    "license": "FAL",
+    "page": "https://commons.wikimedia.org/wiki/File:Jaipur_03-2016_02_Amber_Fort.jpg"
+  },
+  "citypalace": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Jaipur_03-2016_20_City_Palace_complex.jpg/1280px-Jaipur_03-2016_20_City_Palace_complex.jpg",
+    "author": "A.Savin",
+    "license": "FAL",
+    "page": "https://commons.wikimedia.org/wiki/File:Jaipur_03-2016_20_City_Palace_complex.jpg"
+  },
+  "jalmahal": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Jaipur_03-2016_39_Jal_Mahal_-_Water_Palace.jpg/1280px-Jaipur_03-2016_39_Jal_Mahal_-_Water_Palace.jpg",
+    "author": "A.Savin",
+    "license": "FAL",
+    "page": "https://commons.wikimedia.org/wiki/File:Jaipur_03-2016_39_Jal_Mahal_-_Water_Palace.jpg"
+  },
+  "agrafort": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Agra_03-2016_16_Agra_Fort.jpg/1280px-Agra_03-2016_16_Agra_Fort.jpg",
+    "author": "A.Savin",
+    "license": "FAL",
+    "page": "https://commons.wikimedia.org/wiki/File:Agra_03-2016_16_Agra_Fort.jpg"
+  },
+  "palolem": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Palolem_beach%2C_Goa_-_panoramio.jpg/1280px-Palolem_beach%2C_Goa_-_panoramio.jpg",
+    "author": "Biswajit Majumdar",
+    "license": "CC BY-SA 3.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Palolem_beach,_Goa_-_panoramio.jpg"
+  },
+  "marina": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Marina_Beach_in_Chennai.jpg/1280px-Marina_Beach_in_Chennai.jpg",
+    "author": "Dey.sandip",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Marina_Beach_in_Chennai.jpg"
+  },
+  "aguada": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Aguada_Fort_Top_View%2C_North_Goa.jpg/1280px-Aguada_Fort_Top_View%2C_North_Goa.jpg",
+    "author": "Rupeshsarkar",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Aguada_Fort_Top_View,_North_Goa.jpg"
+  },
+  "hawamahal": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/20191218_Pa%C5%82ac_Wiatr%C3%B3w_w_Jaipurze_1129_9124.jpg/1280px-20191218_Pa%C5%82ac_Wiatr%C3%B3w_w_Jaipurze_1129_9124.jpg",
+    "author": "Jakub Ha\u0142un",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:20191218_Pa%C5%82ac_Wiatr%C3%B3w_w_Jaipurze_1129_9124.jpg"
+  },
+  "sabarmatiashram": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Sabarmati_Ashram_-_Ahmedabad_-_Gujarat_-_DSC001.jpg/1280px-Sabarmati_Ashram_-_Ahmedabad_-_Gujarat_-_DSC001.jpg",
+    "author": "Snehrashmi",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Sabarmati_Ashram_-_Ahmedabad_-_Gujarat_-_DSC001.jpg"
+  },
+  "kapaleeshwarar": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/A_down_angle_view_of_the_Kapaleeshwarar_Temple_in_Chennai.jpg/1280px-A_down_angle_view_of_the_Kapaleeshwarar_Temple_in_Chennai.jpg",
+    "author": "Dassap",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:A_down_angle_view_of_the_Kapaleeshwarar_Temple_in_Chennai.jpg"
+  },
+  "riverfront": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Sabarmati_riverfront.jpg/1280px-Sabarmati_riverfront.jpg",
+    "author": "Abhi1718",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Sabarmati_riverfront.jpg"
+  },
+  "santhome": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/San_Thome_Basilica%2C_Mylapore_in_Chennai_06.jpg/1280px-San_Thome_Basilica%2C_Mylapore_in_Chennai_06.jpg",
+    "author": "Pinakpani",
+    "license": "CC BY 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:San_Thome_Basilica,_Mylapore_in_Chennai_06.jpg"
+  },
+  "bomjesus": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Front_Elevation_of_Basilica_of_Bom_Jesus.jpg/1280px-Front_Elevation_of_Basilica_of_Bom_Jesus.jpg",
+    "author": "iMahesh",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Front_Elevation_of_Basilica_of_Bom_Jesus.jpg"
+  },
+  "munnar": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Munnar_Tea_Plantations-WUS07343-Pano.jpg/1920px-Munnar_Tea_Plantations-WUS07343-Pano.jpg",
+    "author": "Rainer Halama",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Munnar_Tea_Plantations-WUS07343-Pano.jpg"
+  },
+  "valleyofflowers": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Valley_of_flowers_national_park%2C_Uttarakhand%2C_India_01.jpg/1920px-Valley_of_flowers_national_park%2C_Uttarakhand%2C_India_01.jpg",
+    "author": "Rohit Sharma",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Valley_of_flowers_national_park,_Uttarakhand,_India_01.jpg"
+  },
+  "bus_airavat": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/KSRTC-Airavat-Club-Class-Volvo-B9R.jpg/960px-KSRTC-Airavat-Club-Class-Volvo-B9R.jpg",
+    "author": "Rsrikanth05",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:KSRTC-Airavat-Club-Class-Volvo-B9R.jpg"
+  },
+  "bus_garuda": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/APSRTC%27s_VOLVO_GarudaPlus.JPG/960px-APSRTC%27s_VOLVO_GarudaPlus.JPG",
+    "author": "LOVEofZ",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:APSRTC%27s_VOLVO_GarudaPlus.JPG"
+  },
+  "bus_shivneri": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/MSRTC-Scania-Shivneri.jpg/960px-MSRTC-Scania-Shivneri.jpg",
+    "author": "Rsrikanth05",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:MSRTC-Scania-Shivneri.jpg"
+  },
+  "bus_scania": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Scania_Metrolink_HD_14.5_M_Ashwamedh.jpg/960px-Scania_Metrolink_HD_14.5_M_Ashwamedh.jpg",
+    "author": "Karthik Nadar",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Scania_Metrolink_HD_14.5_M_Ashwamedh.jpg"
+  }
+}

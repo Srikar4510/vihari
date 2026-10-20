@@ -1,0 +1,98 @@
+/* Scroll reveal */
+.reveal {
+    opacity: 0;
+    transition: opacity 0.8s ease, transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+    will-change: opacity, transform;
+}
+
+.reveal--up { transform: translateY(40px); }
+.reveal--left { transform: translateX(-50px); }
+.reveal--right { transform: translateX(50px); }
+.reveal--zoom { transform: scale(0.92); }
+
+.reveal.is-visible {
+    opacity: 1;
+    transform: none;
+}
+
+/* Section underline grows in when its header is revealed */
+.reveal .gallary-header h2::after,
+.gallary-header.reveal h2::after {
+    width: 0;
+    transition: width 0.8s 0.3s ease;
+}
+
+.reveal.is-visible .gallary-header h2::after,
+.gallary-header.reveal.is-visible h2::after {
+    width: 60px;
+}
+
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: none; }
+}
+
+@keyframes kenBurns {
+    0% { transform: scale(1) translate(0, 0); }
+    100% { transform: scale(1.12) translate(-1.5%, -1%); }
+}
+
+@keyframes floatY {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-14px); }
+}
+
+@keyframes drift {
+    0% { transform: translateX(-10vw); }
+    100% { transform: translateX(110vw); }
+}
+
+/* The bus stays on the road (58px is the bus width) and fades in and out at the ends. */
+@keyframes busDrive {
+    0% { left: 0; opacity: 0; }
+    6% { opacity: 1; }
+    94% { opacity: 1; }
+    100% { left: calc(100% - 58px); opacity: 0; }
+}
+
+@keyframes wheelBounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-2px); }
+}
+
+@keyframes roadDash {
+    to { background-position: -64px 0; }
+}
+
+@keyframes pinPop {
+    0%, 100% { transform: translate(-50%, 0) scale(1); }
+    50% { transform: translate(-50%, -8px) scale(1.12); }
+}
+
+@keyframes shine {
+    from { left: -75%; }
+    to { left: 125%; }
+}
+
+@keyframes pulseRing {
+    0% { box-shadow: 0 0 0 0 rgba(41, 217, 213, 0.55); }
+    100% { box-shadow: 0 0 0 16px rgba(41, 217, 213, 0); }
+}
+
+@keyframes scrollHint {
+    0% { opacity: 0; transform: translate(-50%, 0); }
+    40% { opacity: 1; }
+    100% { opacity: 0; transform: translate(-50%, 14px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation: none !important;
+        transition: none !important;
+    }
+
+    .reveal {
+        opacity: 1;
+        transform: none;
+    }
+}

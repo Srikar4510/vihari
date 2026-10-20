@@ -1,0 +1,88 @@
+.AskAgency {
+  font-size: 16px;
+  padding: 30px 0 60px;
+  background: #f7f9fa;
+}
+
+.agency-card {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr 1fr;
+  align-items: center;
+  gap: 36px;
+  padding: 36px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #eafbfb 0%, #ffffff 60%);
+  box-shadow: 0 10px 30px rgba(20, 40, 55, 0.08);
+}
+
+.busImage {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+  border-radius: 14px;
+}
+
+.busImage2 {
+  width: 100%;
+  height: 230px;
+  object-fit: contain;
+  animation: floatY 4s ease-in-out infinite;
+}
+
+.agency-text {
+  text-align: center;
+}
+
+.agency-eyebrow {
+  color: #3995a3;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.agency-text h2 {
+  margin: 10px 0 14px;
+  color: #2f3e46;
+  font-size: 32px;
+  font-weight: 700;
+  font-family: 'Poppins', sans-serif;
+}
+
+.agency-text p {
+  color: #5f6f78;
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+.AddAgency {
+  padding: 12px 30px;
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+  background: #29d9d5;
+  font-size: 16px;
+  font-weight: 600;
+  box-shadow: 0 8px 20px rgba(41, 217, 213, 0.35);
+  transition: background 0.2s, transform 0.2s;
+}
+
+.AddAgency:hover {
+  background: #1fc4c0;
+  transform: translateY(-2px);
+}
+
+.AddAgency i {
+  margin-left: 8px;
+}
+
+@media (max-width: 992px) {
+  .agency-card {
+    grid-template-columns: 1fr;
+  }
+
+  .busImage2 {
+    display: none;
+  }
+}
